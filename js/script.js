@@ -1,5 +1,5 @@
 $(function(){
-  alert("ok");
+  //alert("ok");
 
 
 
@@ -7,20 +7,26 @@ $(function(){
   $(".contact").click(function(){
     $(".gnb03").css("width","270");
     $(".gnb03").css("height","270");
+    $(".cont_li").css("display","block");
+    $(".cont_p").css("padding-top","15%");
+    $(".cont_p").css("font-size","25px");
   })
 
-  $("#gnb li").hover(function(){
+  $("#gnb>li").hover(function(){
     $(this).css("width","170");
     $(this).css("height","170");
-    $("#gnb li").not(this).css("width","0");
-    $("#gnb li").not(this).css("height","0");
-    $("#gnb li a img").css("display","none");
+    $("#gnb>li").not(this).css("width","0");
+    $("#gnb>li").not(this).css("height","0");
+    $("#gnb>li a img").css("display","none");
   },function(){
     $(".gnb01").css("width","170");
     $(".gnb01").css("height","77");
-    $("#gnb li").not(".gnb01").css("width","77");
-    $("#gnb li").not(".gnb01").css("height","77");
-    $("#gnb li a img").css("display","block");
+    $("#gnb>li").not(".gnb01").css("width","77");
+    $("#gnb>li").not(".gnb01").css("height","77");
+    $("#gnb>li a img").css("display","block");
+    $(".cont_li").css("display","none");
+    $(".cont_p").css("padding-top","35%");
+    $(".cont_p").css("font-size","20px");
   })
 
 
