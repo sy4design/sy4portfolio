@@ -1,7 +1,4 @@
 $(function(){
-  alert("ok")
-
-
 
 //네비 애니메이션
   $(".contact").click(function(){
