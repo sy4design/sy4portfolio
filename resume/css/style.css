@@ -1,0 +1,358 @@
+/*초기화스타일*/
+	*{margin:0; padding:0;}
+	ul li {list-style:none;}
+/*애니메이션*/
+	@keyframes ready {
+			0% {transform: rotate( 0deg );}
+
+			100% {transform: rotate( 180deg );}
+	}
+
+/*배경*/
+  body {
+    background: black;
+		height:3000px;
+  }
+
+/*레이아웃*/
+  #wrap {
+    position: relative;
+    width:1500px;
+    margin:0 auto;
+  }
+
+	header { border-bottom:3px solid #F2F2F2;
+			position: relative;
+      height:600px;
+      transition: all 1s;
+      z-index: 999;
+	}
+
+/*헤더 콘텐츠*/
+	header h1 {
+			width:462px; height:468px;
+			text-indent:-9999px;
+			position: relative;
+			margin:0 auto; top:50px;
+      padding-left: 50px;
+      transition: all 1s;
+	}
+
+	header h1 a {
+			display:block;
+      background:url("../images/logo.png")no-repeat;
+      background-size: 100%;
+			width:100%; height:100%;
+      transition: all 0.5s;
+	}
+
+  header h1 a:hover {
+    background:url("../images/logo_ov.png")no-repeat;
+    background-size: 100%;
+  }
+
+  header .txt {
+    float: left;
+    margin-left: 19%;
+    margin-top: 225px;
+  }
+
+	.head_m {display: none;}
+
+	#gnb { /*헤더메뉴*/
+    width:170px; height:170px;
+    float: right;
+    position: absolute;
+    top:40px;
+    right:200px;
+    transition: all 1s;
+    opacity: 30%;
+	}
+
+  #gnb:hover {opacity: 100%;}
+
+  #gnb > li {
+    background-color: #666;
+    width:77px; height:77px;
+    border-radius:10px;
+    position: absolute;
+    transition: all 1s;
+    overflow: hidden;
+  }
+
+  #gnb > li:nth-child(1) {width:170px; left:0; top:0;}
+  #gnb > li:nth-child(2) {left:0; bottom:0;}
+  #gnb > li:nth-child(3) {right:0; bottom:0;}
+
+	#gnb a {
+    width:100%; height:100%;
+		color: #666;
+		transition: all 1s;
+		text-decoration: none;
+	}
+
+	#gnb li:hover a{
+    display: block;
+		color:white;
+	}
+
+	#gnb > li a p {
+		display:none;
+		padding-top: 35%;
+		text-align: center;
+		line-height: 30px;
+		font-size: 20px;
+	}
+
+	#gnb > li:hover a p {display: block;}
+
+	#gnb .cont_li {
+		display:none;
+		border-top:1px solid white;
+		width:200px; height:100px;
+		position: absolute;
+		top:130px; left:35px;
+	}
+
+	#gnb .cont_li li {
+		padding-top: 12px;
+
+	}
+
+	#gnb .cont_li li, #gnb .cont_li li a {
+		display: block;
+		color:#999;
+		text-align: center;
+		font-size: 18px;
+	}
+
+	#gnb .cont_li a:hover {color:white;}
+
+  .contWrap {
+    background: white;
+    width:1500px;
+    height:0px;
+    position: absolute;
+    z-index: 998;
+    overflow: hidden;
+    transition: all 1s;
+  }
+
+  .contWrap h3 {
+    width:1200px;
+    margin:0 auto;
+    text-align: left;
+    padding: 250px 0 40px 30px;
+    font-size: 40px;
+    line-height: 45px;
+    border-bottom: 2px solid #d9d9d9;
+  }
+
+  .contWrap h3 .eng {
+    font-size: 30px;
+    color:#888;
+  }
+
+	.resume {
+		display:block;
+		width:1100px; margin:0 auto;
+		margin-top:70px;
+	}
+
+	.resume_m {display: none;}
+
+  /*~639*/
+  @media screen and (max-width:639px){
+		body {
+			background: black;
+			height:100%;
+		}
+
+	/*레이아웃*/
+		#wrap {
+			position: relative;
+			width:90%;
+			margin:0 auto;
+			height:1450px; overflow: hidden;
+		}
+
+		header { display: none;}
+
+		.head_m {
+			display: block;
+			background: black;
+			width:100%; height:100px;
+			position: absolute; z-index: 999;
+		}
+
+		.head_m h1 {
+				width: 170px; height: 170px;
+				text-indent:-9999px;
+				position: relative;
+				margin:0 auto; top:10px;
+		}
+
+		.head_m h1 a {
+				display:block;
+				background:url("../images/logo.png") no-repeat;
+				background-size: 100% auto;
+				width:100%; height:100%;
+				transition: all 0.5s;
+		}
+
+		.head_m h1 a:hover {
+			background:url("../images/logo_ov.png") no-repeat;
+			background-size: 100% auto;
+		}
+
+	  #gnb { /*헤더메뉴*/
+			display: none;
+		}
+
+		#gnb_m {
+			display: none;
+			width: 60%; margin: 0 auto;
+			margin-top:0; height: 320px;
+			position: relative; z-index: 999;
+			background: rgba(0, 0, 0, 0.8);
+			border: 10px solid rgba(0, 0, 0, 0.8);
+			border-radius:20px;
+		}
+
+		#gnb_m > li {
+			background-color: #666;
+			width:100%; height:70px;
+			border-radius:10px;
+			position: absolute;
+			transition: all 1s;
+			overflow: hidden;
+		}
+
+		#gnb_m > li:nth-child(1) {top: 0;}
+		#gnb_m > li:nth-child(2) {top: 90px;}
+		#gnb_m > li:nth-child(3) {bottom: 70px;}
+
+		#gnb_m > li > a {
+			display: block;
+			width:100%; height:60px;
+			padding-top: 10px;
+			color: white;
+			transition: all 0.5s;
+			text-decoration: none;
+			text-align: center;
+			font-size: 18px;
+		}
+
+		#gnb_m > li > .contact_m {padding: 0; height:70px; line-height: 70px;}
+
+		#gnb_m > li:hover > a {
+			display: block;
+			color: black;
+		}
+
+		#gnb_m > li:hover {
+			background-color: white;
+		}
+
+		#gnb_m .cont_li_m {
+			display:none;
+			border-top:1px solid #666;
+			width:200px; height:100px;
+			position: relative; margin: 0 auto;
+			padding-top:20px; top:10px;
+		}
+
+		#gnb_m .cont_li_m li, .cont_li_m li a {
+			padding-top: 10px; text-align: center;
+			font-size: 16px; text-decoration: none;
+			transition: all 1s; color: #666;
+		}
+
+		#gnb_m .cont_li_m a:hover {color: black;}
+
+		#gnb_m .close {
+			bottom: -15px; background: none;
+		}
+
+		#gnb_m .close a {
+			display: block;
+			width:40px; height:40px;
+			padding: 0; line-height: 40px;
+			border-radius: 30px;
+			background: #eee;
+			color: #666; font-weight: bold;
+			margin: 0 auto;
+		}
+
+		#gnb_m .close:hover {background: none;}
+
+		#gnb_m .close:hover a {color: #666;}
+
+		#gnb_m .close a:hover {color: white; background: #666;}
+
+	  .open {
+			position: absolute;
+			top: 35px; right: 0;
+		}
+
+  .contWrap {
+			background: white;
+			width:100%;
+			height:0px;
+			position: absolute;
+			top:0;
+			z-index: 998;
+			overflow: hidden;
+			transition: all 1s;
+		}
+
+		.contWrap h3 {
+			width:80%;
+			margin:0 auto;
+			text-align: left;
+			padding: 200px 0 40px 30px;
+			font-size: 25px;
+			line-height: 25px;
+			border-bottom: 2px solid #d9d9d9;
+		}
+
+		.contWrap h3 .eng {
+			font-size: 18px;
+			color:#888;
+		}
+
+		.resume {display: none;}
+
+		.resume_m {
+			display:block;
+			width: 90%; max-width: 400px;
+			margin:0 auto;
+			margin-top:30px;
+		}
+
+		footer {
+			background: black;
+			position:absolute; bottom:0; width:100%;
+			height: 150px; z-index: 999;
+		}
+  }
+
+
+  /*640~779*/
+  @media screen and (min-width:640px) and (max-width:779px){
+
+  }
+
+  /*780~1023*/
+  @media screen and (min-width:780px) and (max-width:1023px){
+
+  }
+
+  /*1024~1279*/
+  @media screen and (min-width:1024px) and (max-width:1279px){
+
+  }
+  /*1280~1599*/
+  @media screen and (min-width:1280px) and (max-width:1599px){
+
+  }
