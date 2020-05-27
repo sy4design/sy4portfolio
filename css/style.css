@@ -1,6 +1,8 @@
 /*초기화스타일*/
 	*{margin:0; padding:0;}
 	ul li {list-style:none;}
+
+
 /*애니메이션*/
 	@keyframes ready {
 			0% {transform: rotate( 0deg );}
@@ -33,12 +35,14 @@
 		animation-iteration-count: 2;
 	}
 
-	.ready_cont p {
+	.n {
 		width: 100%; top:50%;
 		position:fixed; text-align: center;
 		z-index: 999;
 		background: rgba(255,255,255,0.8);
 	}
+
+	.m {display: none;}
 
 /*배경*/
   body {
@@ -46,13 +50,14 @@
   }
 
 /*레이아웃*/
-  #wrap { border:1px solid red;
+  #wrap {
     position: relative;
-    width:1500px; height:2000px;
+    width:100%; height:1500px;
     margin:0 auto;
   }
 
-	header { border-bottom:3px solid #F2F2F2;
+	header { border-bottom:2px solid #888;
+			width:90%; margin: 0 auto;
 			position: relative;
       height:600px;
 	}
@@ -78,14 +83,19 @@
 
   header .txt {
     float: left;
-    margin-left: 19%;
     margin-top: 225px;
   }
 
+	.headWrap {
+		width:80%; margin: 0 auto;
+		min-width: 700px; max-width: 1000px;
+	}
+
+	#gnb_m {display: none;}
+
 	#gnb { /*헤더메뉴*/
     width:170px; height:170px;
-    float: right;
-    margin-right: 22%;
+    float: right; margin-right: 5%;
     position:relative;
     top:-260px;
 	}
@@ -147,31 +157,208 @@
 
 	#gnb .cont_li a:hover {color:white;}
 
-  /*~479*/
-  @media screen and (max-width:479px){
+	.scroll_1 {position: absolute; top: 30px; left: 150px;}
+	.scroll_2 {position: absolute; top: 30px; right: 150px;}
+
+	.portfolio h3 {display: none;}
+
+	.portfolio {
+		position: relative;
+		padding-top:300px;
+		height:800px;
+	}
+
+	.portfolio table {
+		width:90%; min-width: 620px; margin: 0 auto; height:500px;
+	}
+	.portfolio tr {
+		width:80%; height:400px;
+	}
+	.portfolio td { background: #666;
+		display: inline-block;
+		width:23.5%; height:100%;
+	}
+
+	.portfolio td:nth-child(1) {margin-right: 2%;}
+	.portfolio td:nth-child(2) {margin-right: 2%;}
+	.portfolio td:nth-child(3) {margin-right: 2%;}
+
+	.portfolio td a {
+		display: block;
+		width: 100%; height: 100%;
+		text-decoration: none;
+		font-weight: 500;
+		width:100%; text-align: center;
+		position: relative;
+		font-size: 30px; color: white;
+		background-image: none;
+	}
+
+	.portfolio td a:hover {
+		background-image: url("");
+		background-attachment: fixed;
+	}
+
+	.portfolio td a span {position: relative; top: 40%;}
+
+	.portfolio td .title {display: none;}
+
+	.portfolio td a:hover .title {display: block;
+		background: rgba(0, 0, 0, 0.5);
+		height:100px; line-height: 100px;
+	}
+
+	.portfolio td .cover {display: block;
+		background: none;
+	}
+
+	.portfolio td a:hover .cover {display: none;}
+
+	footer {background-color: #eee;
+		height:300px;
+	}
+
+	/*~639*/
+	@media screen and (max-width:639px){
+			.n {
+				display: none;
+			}
+
+			.m {
+				display: block;
+				width: 100%; height: 40px; line-height: 20px;
+				padding: 10px 0 10px 0;
+				position: fixed; top: 65%; text-align: center;
+				z-index: 999;
+				background: rgba(255,255,255,0.8);
+			}
+
+			#wrap {
+				position: relative;
+				width: 100%;
+				height: 100%;
+			}
+
+
+			header {
+					border: none;
+					position: relative;
+		      height: 100%;
+			}
+
+		/*헤더 콘텐츠*/
+		.headWrap {
+			width:80%; margin: 0 auto;
+			min-width: 200px;
+		}
+
+			header h1 {
+					width: 300px; height: 300px;
+					text-indent:-9999px;
+					position: relative;
+					margin:0 auto; top:50px;
+			}
+
+			header h1 a {
+					display:block;
+		      background:url("../images/logo.png") no-repeat;
+					background-size: 100% auto;
+					width:100%; height:100%;
+		      transition: all 0.5s;
+			}
+
+		  header h1 a:hover {
+		    background:url("../images/logo_ov.png") no-repeat;
+				background-size: 100% auto;
+		  }
+
+		  header .txt {
+		    display: none;
+		  }
+
+			#gnb { /*헤더메뉴*/
+		    display: none;
+			}
+
+			#gnb_m {
+				display: block;
+				width: 60%; margin: 0 auto;
+				margin-top:80px; height: 250px;
+				position: relative;
+			}
+
+		  #gnb_m > li {
+		    background-color: #666;
+		    width:100%; height:70px;
+		    border-radius:10px;
+		    position: absolute;
+		    transition: all 1s;
+		    overflow: hidden;
+		  }
+
+		  #gnb_m > li:nth-child(1) {top: 0;}
+		  #gnb_m > li:nth-child(2) {top: 90px;}
+		  #gnb_m > li:nth-child(3) {bottom: 0;}
+
+			#gnb_m > li > a {
+				display: block;
+		    width:100%; height:60px;
+				padding-top: 10px;
+				color: white;
+				transition: all 1s;
+				text-decoration: none;
+				text-align: center;
+				font-size: 18px;
+			}
+
+			#gnb_m > li > .contact_m {padding: 0; height:70px; line-height: 70px;}
+
+			#gnb_m > li:hover > a {
+		    display: block;
+				color: black;
+			}
+
+			#gnb_m > li:hover {
+		    background-color: white;
+			}
+
+			#gnb_m .cont_li_m {
+				display:none;
+				border-top:1px solid #666;
+				width:200px; height:100px;
+				position: relative; margin: 0 auto;
+				padding-top:20px; top:10px;
+			}
+
+			#gnb_m .cont_li_m li, .cont_li_m li a {
+				padding-top: 10px; text-align: center;
+				font-size: 16px; text-decoration: none;
+				transition: all 1s; color: #666;
+			}
+
+			#gnb_m .cont_li_m a:hover {color: black;}
+
+			.portfolio {display: none;}
+
+			footer {display: none;}
 
   }
 
-  /*480~639*/
-  @media screen and (min-width:480px) and (max-width:639px){
+	/*640~779*/
+	@media screen and (min-width:640px) and (max-width:779px){
 
-  }
+	}
 
-  /*640~779*/
-  @media screen and (min-width:640px) and (max-width:779px){
+	/*780~1023*/
+	@media screen and (min-width:780px) and (max-width:1023px){
 
-  }
+	}
 
-  /*780~1023*/
-  @media screen and (min-width:780px) and (max-width:1023px){
+	/*1024~1279*/
+	@media screen and (min-width:1024px) and (max-width:1279px){
 
-  }
+	}
+	/*1280~1599*/
+	@media screen and (min-width:1280px) and (max-width:1599px){
 
-  /*1024~1279*/
-  @media screen and (min-width:1024px) and (max-width:1279px){
-
-  }
-  /*1280~1599*/
-  @media screen and (min-width:1280px) and (max-width:1599px){
-
-  }
+	}
