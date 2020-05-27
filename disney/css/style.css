@@ -1,0 +1,397 @@
+
+/*초기화스타일*/
+		*{margin:0; padding:0;}
+		ul li {list-style:none;}
+		.m {display: none;}
+
+/*사이트 전체 크기 설정*/
+		#wrap {
+				width:100%; min-width:1024px; max-width:1920px;
+		}
+
+/*애니메이션 설정*/
+		@keyframes iconAni {
+				0% {opacity:0;}
+				100% {opacity:1;}
+		}
+
+/*헤더 배경과 커튼 설정*/
+
+		header {
+				height:1000px;
+				background:url("../images/1.JPG")no-repeat center 0px;
+				background-size:2000px 800px;
+				width:100% text-align:center;
+				position:relative;
+				overflow:hidden;
+		}
+
+		header h1 {
+				position:relative;
+				margin:0 auto;
+				margin-top:240px;
+				width:220px;
+				z-index:5;
+				transition:all 1s;
+		}
+
+		header > a {
+			   display:block; height:148px; width:220px;
+		}
+
+		header > img {
+				position:absolute; top:0;
+				transition:all 1s;
+		}
+
+		header div.left{
+				 width:50%; height:700px;
+				position:absolute;
+				top:0px; left:0;
+				transition:all 1s; z-index:2;
+		}
+		header div.right{
+				 width:50%; height:700px;
+				position:absolute; top:0px; right:0;
+				transition:all 1s; z-index:2;
+		}
+
+		header .ct_bg {z-index:3}
+		header .ct_left { float:right;}
+
+/*헤더 안 디즈니 소개 영역*/
+
+		/*제목 숨기기*/
+			#disney h3 {display:none;}
+
+		/*디즈니 소개 배경*/
+			#disney {
+						/*스타일*/
+					border:3px solid #181a34;
+					height:100%; width:800px;
+					transform:skewX(-35deg);
+					background:rgba(0,0,64,0.6);
+					transition: all 1s;
+
+						/*위치*/
+					position:absolute; top:0; right:-1400px;
+					z-index:999;
+			}
+
+
+	/*디즈니 소개 컨텐츠*/
+
+		/*미키마우스*/
+			/*미키마우스와 말풍선 박스*/
+				#disney .mikiBox {
+						position:relative; height:730px;
+						top:180px; left:-210px;
+						display:none;
+						transform:skewX(35deg);
+				}
+
+
+			/*미키마우스 이미지*/
+				#disney .miki {position:absolute; left:140px; top:-50px;}
+
+			/*말풍선 이미지*/
+				#disney .mikiSay{
+							/*위치,크기,배경*/
+						position:absolute; left:340px; top:10px;
+						width:350px; height:279px;
+						background:url("../images/miki_say.png")no-repeat 15px 0 ;
+
+							/*글자 스타일*/
+						font-family: 'Nanum Brush Script', cursive;
+						font-size:48pt; color:#ffcc66;  text-align:center;
+						line-height:50px; padding-top:60px; padding-right:280px;
+				}
+
+			/*디즈니 소개 텍스트*/
+				#disney .whatD {
+							/*글자스타일*/
+						font-family: 'Jua', sans-serif;
+						font-size:14pt; color:#ffcc66;  letter-spacing:3px;
+
+							/*배경 위치,크기,스타일*/
+						position:absolute; bottom:30px; left:160px;
+						width:450px; height:250px; padding:30px;
+						border:5px solid #ffcc66;
+						border-radius:20px 20px 20px 20px;
+				}
+
+				.whatD .t1, .whatD .t2 {
+						display:block; text-align:center;
+				}
+
+				.whatD .t2 {margin-bottom:20px;}
+
+			/*바로가기 링크*/
+				.whatD a {
+							/*배경 위치, 크기 스타일*/
+						position:absolute; bottom:20px;
+						line-height:35px; height:35px; width: 200px;
+						background:#ffcc66;
+						border-radius:15px 15px 15px 15px;
+						display:block; z-index:1000;
+
+							/*글자 위치,스타일*/
+						text-align:center;
+						text-decoration:none; color:#000033;
+				}
+
+				.whatD a.link1 { left:30px;}
+				.whatD a.link2 { right:30px;}
+
+				.whatD a:hover {background:white;}
+
+		/*어두워지는 효과*/
+				.dark {
+						position:Absolute; top:0; left:0;
+						width:1920px; height:1000px;
+						background:rgba(0,0,0,0.7);
+						z-index:998; display:none;
+				}
+
+		/*여길 만지세요*/
+			.touch {
+						/*크기와 위치*/
+					position:absolute; bottom:50px; left:20px;
+					width:180px; height:150px; transform:skewX(35deg);
+
+						/*글자 스타일*/
+					font-family: 'Nanum Brush Script', cursive;
+					font-size:55pt; color:#ffcc66;  text-align:center;
+					line-height:80px;
+			}
+
+/*헤더 안 디즈니 애니메이션 갤러리*/
+
+	p.title {
+				/*크기와 위치*/
+			position:absolute;top:120px; z-index:1;
+			width:70%; min-width: 800px; height:250px;
+
+				/*글자 스타일*/
+			font-family: 'Nanum Brush Script', cursive;
+			font-size:70pt; color:white;  text-align:center;
+	}
+
+	p.title span {display:block;}
+	p.title .t1 {padding-right:45%;}
+	p.title .t2 {margin-top:-40px; padding-right:20%;}
+	p.title .t3 {margin-top:-30px; padding-left:5%;}
+
+/*네비게이션 설정*/
+
+		/*네비게이션 제목 없애기*/
+			h2 {display:none;}
+
+		/*네비*/
+			nav {
+						/*배경 스타일*/
+					background:url("../images/nav_bg.png");
+					width:160px; height:650px;
+					border:3px solid #181a34;
+					border-radius:15px 15px 15px 15px;
+					overflow:hidden; z-index:998;
+
+						/*전체 위치*/
+					position:fixed; top:80px; left:-200px;
+			}
+
+		/*네비 안 리스트*/
+			nav li.goST {
+					margin:18px 0 0 19px;  /*리스트 전체 위치*/
+					opacity:0.4; transition: all 0.5s; /*리스트 투명도*/
+			}
+
+			nav li:hover {opacity:1;} /*리스트 오버 투명도*/
+
+			nav .head {margin:0; opacity:1;} /*첫번째 리스트 (디즈니로고)*/
+
+			nav .foot {margin-bottom:0;} /*마지막리스트*/
+
+/*섹션 안 네비 보기 버튼*/
+
+		/*버튼 배경 스타일과 위치*/
+			section .showNav {
+					border:3px solid #181a34;
+					background:url("../images/nav_bg.png");
+					background-size:100%;
+					width:100px; height:100px;
+					border-radius:50px 50px 50px 50px;
+					position:absolute; top:50px; left:50px;
+					z-index:998;
+			}
+		/*버튼 속 로고 위치*/
+			.showNav img {position:relative;top:27px;}
+
+/*명대사*/
+
+		section .say {
+					/*글자 스타일과 글자 위치*/
+				font-family: 'Nanum Brush Script', cursive;
+				text-align:center;
+				font-size:48pt;
+				color:white; padding-top:57px;
+
+					/*배경 스타일과 전체 위치*/
+				position:absolute;
+				top:690px; width:100%; height:140px;
+				border:5px solid #2f2f2f;
+				border-left:none;border-right:none;
+				background:rgba(0,0,0,0.7);
+				display:none;
+		}
+
+		/*명대사-이름 스타일과 글자 위치*/
+				section .name {
+						font-size:35pt;
+						margin-left:30px;
+				}
+
+/*섹션 설정*/
+
+		/*전체 섹션 공통*/
+			section {
+					width:100%; height:1040px;
+					position:relative;
+					background-repeat:no-repeat;
+					background-attachment:fixed;
+			}
+
+		/*섹션별 배경이미지 변경*/
+			section#cont1 {background-image:url("../images/16.jpg");}/*라푼젤 섹션*/
+
+			section#cont2 {background-image:url("../images/15.jpg");}/*모아나 섹션*/
+
+			section#cont3 {background-image:url("../images/17.jpg");}/*토이스토리 섹션*/
+
+			section#cont4 {background-image:url("../images/18.jpg");}/*겨울왕국 섹션*/
+
+/*섹션별 로고*/
+
+		/*전체 섹션 공통 로고위치*/
+				section h3 {
+						padding-top:40px; position:relative; z-index:998;
+						width:400px; margin:0 auto;
+				}
+
+		/*섹션별 로고 위치 설정*/
+				section#cont1 h3 {padding-right:30px;}	/*라푼젤 로고*/
+				section#cont2 h3 {padding-right:85px;}	/*모아나 로고*/
+				section#cont3 h3 {position:absolute; right:400px;}/*토이스토리 로고*/
+
+/*섹션별 로고를 눌러보세요*/
+		section p.clickHere {
+					/*배경설정*/
+				background:url("../images/clickhere.png") no-repeat;
+				width:267px; height:60px;
+
+					/*글자 스타일*/
+				font-family: 'Hi Melody', cursive; font-weight:bold;
+				color:white; font-size:23pt;
+				text-shadow: 2px 2px 3px #371c00;
+
+					/*글자위치*/
+				text-align:center; line-height:60px;
+
+					/*전체위치*/
+				margin:0 auto;
+				margin-top:20px;
+
+					/*애니메이션*/
+				animation-name: iconAni;
+				animation-duration:1.5s;
+				animation-direction:alternate;
+				animation-iteration-count: infinite;
+		}
+
+	/*토이스토리*/
+			section#cont3 p.clickHere {
+					position:absolute;
+					right:445px; top:520px;
+			}
+
+/*섹션별 로고 클릭시 컨텐츠*/
+	/*노끈 이미지와 배경 어둡게*/
+		#imgString {
+				position:Absolute;
+				top:0;
+				width:100%; height:1040px;
+				background-color:rgba(0,0,0,0.6);
+				background-image:url("../images/string.png");
+				background-position: 0 220px;
+				background-repeat:no-repeat;
+				background-size: 100% 37px;
+				display:none;
+		}
+	/*섹션별 이미지 위치 설정*/
+		#imgString img{position:Absolute;}
+		img.st1-1{
+				top:170px; right:65%; transform:rotate(2deg)
+		}
+		img.st1-2{
+				top:170px; right:40%; transform:rotate(-2deg)
+		}
+		img.st1-3{
+				top:170px; right:7%; transform:rotate(3deg)
+		}
+		img.st2-1{
+				top:190px;left:20%; transform:rotate(4deg)
+		}
+		img.st2-2{
+				top:170px; right:15%; transform:rotate(-2deg)
+		}
+		img.st3-1{
+				top:170px; left:20%; transform:rotate(2deg);
+		}
+		img.st3-2{
+				top:170px; right:3%; transform:rotate(-5deg)
+		}
+		img.st4-1{
+				top:170px; right:65%; transform:rotate(2deg)
+		}
+		img.st4-2{
+				top:170px; right:37%; transform:rotate(-2deg)
+		}
+		img.st4-3{
+				top:170px; right:7%; transform:rotate(3deg)
+		}
+
+/*푸터*/
+		footer{
+				position:Relative;
+				width:100%; height:100px;
+				background:#1a264b;
+		}
+
+		footer p {
+				color:white; font-size:21pt;
+				position:absolute; top:30px; left:50px;
+		}
+
+		/*~1023*/
+		@media screen and (max-width:1023px){
+
+			#wrap {display: none;}
+
+			.m {
+				display: block;
+				position: absolute;
+				height: 100%; width:100%;
+				background: url("../images/nav_bg.png")
+			}
+
+			.m p {
+				width:100%; height:60px; line-height: 60px;
+				color: #181a34;
+				text-align: center;
+				background: rgba(255, 255, 255, 0.8);
+				border: 5px solid #181a34;
+				border-left: none;
+				border-right: none;
+				position:absolute; top:60%;
+			}
+		}
