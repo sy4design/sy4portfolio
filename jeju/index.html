@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>트로피칼제주</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:200,400&display=swap" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<meta name="viewport"
+content="width=divice-width, user-scalable=yes,
+initial-scale=1.0, maximum-scale=3.0"/>
+</head>
+ <body>
+<!-- 헤더 -->
+<header>
+
+	<!-- 로고 -->
+			<h1><a href="index.html">로고</a></h1>
+
+	<!-- 컨텐츠 바로가기 -->
+			<div id="topNav">
+					<h2>컨텐츠 바로가기</h2>
+						<ul>
+							<li><a href="#">로그인</a></li>
+							<li><a href="#">회원가입</a></li>
+						</ul>
+			</div><!-- 컨텐츠 바로가기 닫음 -->
+
+	<!-- 검색 영역 -->
+			<div id="search">
+					<h3>검색 영역</h3>
+							<form method="post" action="">
+									<fieldset class="search">
+											<legend>키워드 검색</legend>
+											<input class="keyWord" type="text" name="search" placeholder="키워드로 검색해보세요!"/>
+											<input class="btn" type="image" src="images/header/home_serch_bt.png" alt="검색"/>
+									</fieldset>
+							</form>
+			</div><!-- 검색 영역 닫음 -->
+
+	<!-- 네비게이션 -->
+			<nav>
+				<h2>네비게이션</h2>
+					<!-- 모바일 채팅 아이콘 -->
+					<a class="chaticon" href="#"><img src="images/header/chat_icon.png" alt="실시간 채팅" /></a>
+
+					<!-- 모바일 네비 아이콘 -->
+					<a class="navicon" href="#"><img src="images/header/nav_icon.png" alt="메뉴" /></a>
+
+					<!-- 전체 메뉴 -->
+					<ul id="menu">
+
+							<!-- 모바일 전용 메뉴 -->
+							<li class="m">
+								<ul>
+									<li class="m1"><a href="#">회원정보</a></li>
+									<li class="m2"><a href="#">로그인</a></li>
+									<li class="m3"><a href="#">회원가입</a></li>
+								</ul>
+							</li>
+
+							<li class="main_1 mainMenu"><a href="#">소개합니다</a>
+								<ul class="sub_1 subMenu">
+									<li><a href="#">제주는 어떤 섬?</a></li>
+									<li><a href="#">트로피칼제주란?</a></li>
+									<li><a href="#">트로피칼 멤버십</a></li>
+								</ul>
+							</li>
+
+							<li class="main_2 mainMenu"><a href="#">제주 체험</a>
+								<ul class="sub_2 subMenu">
+									<li><a href="#">산으로 가요</a></li>
+									<li><a href="#">바다로 가요</a></li>
+									<li><a href="#">숲과 들로 가요</a></li>
+								</ul>
+							</li>
+
+							<li class="main_3 mainMenu"><a href="#">투어패키지</a>
+								<ul class="sub_3 subMenu">
+									<li><a href="#">투어패키지 소개</a></li>
+									<li><a href="#">투어버스 정보</a></li>
+									<li><a href="#">원데이 패키지</a></li>
+									<li><a href="#">프로그램 패키지</a></li>
+								</ul>
+							</li>
+
+							<li class="main_4 mainMenu"><a href="#">커뮤니티</a>
+								<ul class="sub_4 subMenu">
+									<li><a href="#">공지사항</a></li>
+									<li><a href="#">자유게시판</a></li>
+									<li><a href="#">Q&amp;A 게시판</a></li>
+								</ul>
+							</li>
+
+					</ul><!-- 전체 메뉴 닫음 -->
+			</nav>
+</header>
+
+<!-- 컨텐츠 영역 -->
+		<div id="contArea">
+
+		<div id="contWrap">
+
+			<!-- 로그인 영역 -->
+					<div class="loginBox">
+							<h3>로그인</h3>
+							<form method="post" action="">
+								<fieldset class="login">
+									<legend>로그인정보</legend>
+
+											<label for="userID">아이디 입력</label>
+											<input id="userID" type="text" name="id" placeholder="ID입력"/>
+
+											<label for="userPW">비밀번호 입력</label>
+											<input id="userPW" type="password" name="password" placeholder="PW입력" />
+
+											<input class="loginBtn" type="image" src="images/body/login_btn.png" alt="로그인"/>
+
+								</fieldset>
+							</form>
+
+							<ul>
+								<li><a href="#">회원가입</a></li>
+								<li><a href="#">ID/PW 찾기</a></li>
+							</ul>
+
+					</div><!-- 로그인영역 닫음 -->
+
+			<!-- 실시간채팅 -->
+					<div id="chatWrap">
+							<h3>실시간 채팅</h3>
+							<div id="chatLog">
+									<div class="anotherMsg">
+										<span class="anotherName"><a href="#">다람쥐</a></span>
+										<span class="msg">제주도에도 도토리 있어요?</span>
+									</div>
+
+									<div class="anotherMsg">
+										<span class="anotherName"><a href="#">벌꿀오소리<img src="images/body/comm_gold_icon.png" alt="멤버십 회원"/></span></a>
+										<span class="msg">있지 그럼 없냐</span>
+									</div>
+
+									<div class="myMsg">
+										<span class="msg">싸우지 마세요</span>
+									</div>
+
+									<div class="anotherMsg">
+										<span class="anotherName"><a href="#">벌꿀오소리<img src="images/body/comm_gold_icon.png" alt="멤버십 회원"/></span></a>
+										<span class="msg">넌 뭐냐</span>
+									</div>
+							</div>
+
+							<form id="chatForm">
+								<input type="text" autocomplete="off" size="30" id="message" placeholder="메시지를 입력하세요">
+								<input type="submit" class="go" value="보내기">
+							</form>
+
+							<div id="memberWrap">
+									<div id="memberList">
+											<h4>접속 인원 (6)</h4>
+											<div class="memberEl"><a href="#">다람쥐</a></div>
+											<div class="memberEl"><a href="#">벌꿀오소리<img src="images/body/comm_gold_icon.png" alt="멤버십 회원"/></a></div>
+											<div class="memberEl"><a href="#">비회원1</a></div>
+											<div class="memberEl"><a href="#">비회원2</a></div>
+											<div class="memberEl"><a href="#">족제비</a></div>
+											<div class="memberEl"><a href="#">비회원3</a></div>
+									</div>
+							</div>
+
+				    </div><!-- 실시간채팅 닫음 -->
+
+			<!-- 슬라이드영역 -->
+				<div class="slideArea">
+						<h3>슬라이드이미지</h3>
+						<div class="slideBox">
+              <div class="imgBox">
+                <img src="images/body/slide1.png" alt="주상절리" />
+								<img src="images/body/slide2.png" alt="산굼부리" />
+								<img src="images/body/slide3.png" alt="노을" />
+								<img src="images/body/slide4.png" alt="성산일출봉" />
+								<img src="images/body/slide5.png" alt="천지연폭포" />
+              </div>
+						</div>
+						<ul class="play_stop">
+								<li class="play"><a href="#slideBox"><img src="images/body/play.png" alt="실행"/></a></li>
+								<li class="stop"><a href="#slideBox"><img src="images/body/stop.png" alt="정지"/></a></li>
+						</ul>
+
+				</div><!-- 슬라이드영역 닫음 -->
+
+			<!-- 멤버십 영역 -->
+				<div class="mem">
+						<h3><a href="#">트로피칼 멤버십</a></h3>
+							<img class="memImg" src="images/body/mem.png" alt="트로피칼멤버십" />
+							<p>
+									<span class="memTitle">트로피칼 멤버십만의 다양한 혜택!</span>
+									<span class="memTxt">트로피칼 제주의 더욱 특별한 가족인 멤버십 분들에게는
+									매달 제주 관련 다양한 할인권과 트로피칼 제주만의 아기자기한 기념품 등
+									다양한 혜택을 드립니다.</span>
+							</p>
+							<ul>
+									<li><a href="#">멤버십 혜택 보기</a></li>
+									<li><a href="#">멤버십 가입하기</a></li>
+							</ul>
+
+						</div><!-- 멤버십 영역 닫음 -->
+
+			<!-- 자유게시판 -->
+					<div class="commu">
+							<h3><a href="#"><a href="#" class="mom">커뮤니티 ></a>
+							<a href="#" class="son">자유게시판</a></h3>
+							<ul>
+									<li><span class="user">작성자</span> <a href="#" class="name">벌꿀오소리<img src="images/body/comm_gold_icon.png" alt="멤버십 회원"/></a> <a href="#" class="txt">오늘 인생 처음 서핑한 썰 푼다<img src="images/body/comm_new_icon.png" alt="새로운 글" /></a> <span class="date">2019.12.16</span></li>
+									<li><span class="user">작성자</span> <a href="#" class="name">다람쥐</a> <a href="#" class="txt">제주도 카페 추천해주세요~<img src="images/body/comm_new_icon.png" alt="새로운 글" /></a> <span class="date">2019.12.16</span></li>
+									<li><span class="user">작성자</span> <a href="#" class="name">오리너구리</a> <a href="#" class="txt">멤버십 기념품 어떤 거 주나요?</a> <span class="date">2019.10.18</span></li>
+									<li><span class="user">작성자</span> <a href="#" class="name">그냥너구리<img src="images/body/comm_gold_icon.png" alt="멤버십 회원"/></a> <a href="#" class="txt">집에 가고 싶어염</a> <span class="date">2019.10.18</span></li>
+									<li><span class="user">작성자</span> <a href="#" class="name">그냥오소리<img src="images/body/comm_gold_icon.png" alt="멤버십 회원"/></a> <a href="#" class="txt">게스트하우스 파티 오실 분 모집</a> <span class="date">2019.10.16</span></li>
+							</ul>
+				</div><!-- 자유게시판 닫음 -->
+
+			<!-- 유튜브 동영상 영역 -->
+
+				<div id="youtube">
+						<h3>제주도 풍경 영상</h3>
+						<iframe width="1000" height="560" src="https://www.youtube.com/embed/7Y_C6YyIwaI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+
+			</div><!-- 컨텐츠 WRAP 닫음 -->
+	</div><!-- 컨텐츠박스 닫음 -->
+
+<!-- 푸터 -->
+		<footer>
+			<div id="footWrap">
+				<!-- 바로가기메뉴1 -->
+					<h2>사이트 이용 안내</h2>
+						<ul class="info">
+							<li><a href="#">전체서비스 보기</a></li>
+							<li><a href="#">회사 소개</a></li>
+							<li><a href="#">개인정보처리방침</a></li>
+							<li><a href="#">고객센터</a></li>
+						</ul>
+
+				<!-- 주소 -->
+					<address>
+						<span class="a1">tel.010-0000-0000</span>
+						<span class="a2">fax.12341234</span>
+						<span class="a3">이곳은.푸터입니다</span>
+						<span class="a4">address.11로 11-11</span>
+						<span class="a5">&copy;트로피칼제주</span>
+					</address>
+				<!-- 바로가기메뉴2 -->
+					<h3>SNS 바로가기</h3>
+						<ul class="sns">
+							<li><a class="star" href="#">인스타그램</a></li>
+							<li><a class="kakao" href="#">카카오톡</a></li>
+							<li><a class="face" href="#">페이스북</a></li>
+							<li><a class="twit" href="#">트위터</a></li>
+						</ul>
+			</div>
+
+		</footer>
+
+</body>
+</html>
